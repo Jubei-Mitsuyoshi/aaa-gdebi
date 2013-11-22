@@ -1,0 +1,40 @@
+Format: 1.8
+Date: Fri, 22 Nov 2013 19:42:49 +0100
+Source: gdebi
+Binary: gdebi-core gdebi gdebi-kde
+Architecture: source all
+Version: 0.9.1-aaasid
+Distribution: unstable
+Urgency: low
+Maintainer: Ubuntu Developers <ubuntu-dev-team@lists.alioth.debian.org>
+Changed-By: Jubei-Mitsuyoshi <jubei.house.of.five.masters@gmail.com>
+Description: 
+ gdebi      - simple tool to install deb files - GNOME GUI
+ gdebi-core - simple tool to install deb files
+ gdebi-kde  - simple tool to install deb files - KDE GUI
+Changes: 
+ gdebi (0.9.1-aaasid) unstable; urgency=low
+ .
+   * modified from debian source to remove gksu dependency ie will only
+     function correctly in root envirnment
+Checksums-Sha1: 
+ 0d4f6494ac3014f463963b162875d2a00db64eeb 1077 gdebi_0.9.1-aaasid.dsc
+ a97493e621c6d4767c4fe82a3f62428c574cce97 238995 gdebi_0.9.1.orig.tar.gz
+ 3d9e31aa544d06225dd23c7ce73d80b4b6b68655 16535 gdebi_0.9.1-aaasid.debian.tar.gz
+ ab27ab234c46fd0543b67033ae62529be92ccd42 126610 gdebi-core_0.9.1-aaasid_all.deb
+ b6b65d0643a28b077aabcd5cf46d8c3d912d726c 38542 gdebi_0.9.1-aaasid_all.deb
+ 4b8e315c7c371d0c6a33584ddd9ce5bf2ef762f8 27918 gdebi-kde_0.9.1-aaasid_all.deb
+Checksums-Sha256: 
+ a066157132b5a6509bde41135ff8116d14226ad585b7291f03dce86e4d903c78 1077 gdebi_0.9.1-aaasid.dsc
+ 6c2183a12f14e71cc4f5d9c945ea143967878032bd0341885f7fc9089dd6f0be 238995 gdebi_0.9.1.orig.tar.gz
+ 72285e54965fb17f8439d547dd098a0a5bf1858cb96a7113ecad146be03a7534 16535 gdebi_0.9.1-aaasid.debian.tar.gz
+ e356804c831daf3105c00bdd529aacbd5753856a24356aa2e6aa474a879027d8 126610 gdebi-core_0.9.1-aaasid_all.deb
+ 7f74783ee58f2fd5d7e0a7a1b289d79513e9e97cfe6a0a9a52a4825150ab52ae 38542 gdebi_0.9.1-aaasid_all.deb
+ 04dcf2ce8343aeebc6df4a84080032e8282c86203b98ab939df9479fd8831b73 27918 gdebi-kde_0.9.1-aaasid_all.deb
+Files: 
+ 4af21b6b68bbfb50bc8345393eedd65d 1077 admin optional gdebi_0.9.1-aaasid.dsc
+ c6bec136dbed1559baf8cb10c4a7348c 238995 admin optional gdebi_0.9.1.orig.tar.gz
+ 84834c191ee91a8cc659db13fce6f701 16535 admin optional gdebi_0.9.1-aaasid.debian.tar.gz
+ dd17bf0c21a62139234995801cee26b4 126610 admin optional gdebi-core_0.9.1-aaasid_all.deb
+ 3539c1546ee6eb88d1eb6540ee1949f1 38542 admin optional gdebi_0.9.1-aaasid_all.deb
+ dd85233f7ab87ea4f948d578f6bb0d6f 27918 admin optional gdebi-kde_0.9.1-aaasid_all.deb
