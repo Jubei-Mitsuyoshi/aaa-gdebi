@@ -1,7 +1,7 @@
 Source: gdebi
 Section: admin
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-dev-team@lists.alioth.debian.org>
+Maintainer:Jubei Mitsuyoshi <jubei.house.of.five.masters@gmail.com>
 Uploaders: Luca Falavigna <dktrkranz@debian.org>,
            Michael Vogt <mvo@debian.org>
 Build-Depends: debhelper (>= 9),
@@ -26,6 +26,10 @@ Description: simple tool to install deb files
  located packages.
  .
  This package contains the libraries and command-line utility.
+ .
+ The *aaa versions of this package have gsku refs and dependencies
+ removed to increase speed and stability, if not running under root
+ privelages please use the regular debian package
 
 Package: gdebi
 Architecture: all
@@ -43,6 +47,10 @@ Description: simple tool to install deb files - GNOME GUI
  located packages.
  .
  This package contains the graphical user interface.
+ .
+ The *aaa versions of this package have gsku refs and dependencies
+ removed to increase speed and stability, if not running under root
+ privelages please use the regular debian package
 
 Package: gdebi-kde
 Architecture: all
@@ -58,3 +66,7 @@ Description: simple tool to install deb files - KDE GUI
  located packages.
  .
  This package contains the KDE user interface.
+ .
+ The *aaa versions of this package have gsku refs and dependencies
+ removed to increase speed and stability, if not running under root
+ privelages please use the regular debian package
