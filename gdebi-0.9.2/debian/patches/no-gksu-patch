@@ -1,0 +1,63 @@
+Description: <short summary of the patch>
+ patch to remove gksu usage, this is for aaa 
+	and other root distros 
+ .
+ gdebi (0.9.2-aaa0) unstable; urgency=low
+ .
+   * modified from debian source to remove gksu dependency ie will only
+     function correctly in root envirnment
+Author: Jubei Mitsuyoshi <jubei.house.of.five.masters@gmail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- gdebi-0.9.2.orig/GDebi/GDebiCommon.py
++++ gdebi-0.9.2/GDebi/GDebiCommon.py
+@@ -76,8 +76,8 @@ class GDebiCommon(object):
+             self.error_body = _("Your system has broken dependencies. "
+                                 "This application can not continue until "
+                                 "this is fixed. "
+-                                "To fix it run 'gksudo synaptic' or "
+-                                "'sudo apt-get install -f' "
++                                "To fix it run 'synaptic' or "
++                                "'apt-get install -f' "
+                                 "in a terminal window.")
+             return False
+         return True
+--- gdebi-0.9.2.orig/GDebi/GDebiGtk.py
++++ gdebi-0.9.2/GDebi/GDebiGtk.py
+@@ -617,21 +617,13 @@ Install software from trustworthy softwa
+         if os.getuid() != 0:
+ 
+             # build command and argument lists
+-            gksu_cmd = "/usr/bin/gksu"
+-            gksu_args = ["gksu", "--desktop",
+-                         "/usr/share/applications/gdebi.desktop",
+-                         "--message",
+-                         "<big><b>%s</b></big>\n\n%s" % (msg_hdr,msg_bdy)]
++            #no gksu patch
+             gdebi_args = ["--", "gdebi-gtk", "--non-interactive",
+                           self._deb.filename]
+             if not install:
+                 gdebi_args.append("--remove")
+-            # check if we run on ubuntu and always ask for the password
+-            # there - we would like to do that on debian too, but this
+-            # gksu patch is only available on ubuntu currently unfortunately
+-            if UBUNTU:
+-                    gksu_args.append("--always-ask-pass")
+-            os.execv(gksu_cmd, gksu_args+gdebi_args)
++            #no gksu patch
++            os.execv(gdebi_args)
+ 
+         if not self.try_acquire_lock():
+             if install:
